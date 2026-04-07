@@ -26,6 +26,20 @@ We require the installation of ollama, and depending on your installation approa
 launch ollama independetly with `ollama serve` prior to running these notebooks.  Non-default ports (not 11434)
 may require additional setup and work, not descibed in the installation documentation.
 
+## VENV instructions
+
+The typical apply
+
+```
+python -m venv env source env/bin/activate 
+pip install -r requirements.txt
+```
+
+Where possible, installations are performed within the Jupyter Notebooks.  Take care to read the
+`architecture/Installation.md` document to caputre the details of venv setup for JupyterLab and
+the kernel creation / installation into the venv to keep your regular environment pristine, or
+ignore it all and install into your system environment.
+
 ## simple_all_in_one.ipynb
 
 This notebook contains all of the code necessary to demonstrate a fully functional, but simple RAG 
