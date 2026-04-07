@@ -43,3 +43,6 @@ venv.bak/
 
 # vim editing
 *.swp
+
+# application specific
+knowledgebase.txt
