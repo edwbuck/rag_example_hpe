@@ -134,7 +134,7 @@ contains a cat-facts.txt with one fact per line, and we'll maintain that as the
 input data file, mapping each line as a chunk to be vectorized by the Encoding
 LLM.
 
-## Compnent Strategy
+## Component Strategy
 
 * Knowledge Base 
   - Met by the cat-facts.txt text file database.
@@ -155,5 +155,27 @@ LLM.
   - Met by the output of an LLM combining the vectorized query and the
     vectorized facts, with additonal directives to control style, tone, and
     other guiding commentary.
+
+## Design Choices within components
+
+* Knowledge Base 
+  - Encodings stored in a file, to faclitate separation of knowledge base
+    generation and use.
+
+* Semantic Layer
+  - Uses Ollama to simplify LLM management.
+  - Additionally will pull LLMs into Ollama from Jupyter Notebook to simplify
+    deployment efforts.
+  - Use cosine distance to select top N matches.
+
+* Retrieval System
+  - Uses Ollama to simplify LLM management.
+
+* Augmentation
+  - Fully included in Jupyter Notebook.
+
+* Generation
+  - Use Ollama to simplify LLM management.
+
 
 <!-- vim: set ft=markdwon ts=2 sw=2 et ai colorcolumn=80 : -->    
